@@ -10,7 +10,6 @@ import 'package:daily_task/app/shared_components/search_field.dart';
 import 'package:daily_task/app/shared_components/selection_button.dart';
 import 'package:daily_task/app/shared_components/simple_selection_button.dart';
 import 'package:daily_task/app/shared_components/simple_user_profile.dart';
-import 'package:daily_task/app/shared_components/task_progress.dart';
 import 'package:daily_task/app/shared_components/user_profile.dart';
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
 import 'package:flutter/cupertino.dart';
@@ -206,11 +205,7 @@ class DashboardScreen extends GetView<DashboardController> {
                   DateTime.now().formatdMMMMY(),
                 ),
               ),
-              const SizedBox(width: kSpacing / 2),
-              SizedBox(
-                width: 200,
-                child: TaskProgress(data: controller.dataTask),
-              ),
+
             ],
           ),
           const SizedBox(height: kSpacing),

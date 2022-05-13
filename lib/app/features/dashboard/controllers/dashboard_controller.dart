@@ -11,28 +11,32 @@ class DashboardController extends GetxController {
 
   final member = ["Avril Kimberly", "Michael Greg"];
 
-  final dataTask = const TaskProgressData(totalTask: 5, totalCompleted: 1);
 
   final taskInProgress = [
     CardTaskData(
-      label: "Determine meeting schedule",
-      jobDesk: "System Analyst",
-      dueDate: DateTime.now().add(const Duration(minutes: 50)),
+      label: "Icon",
+      temper: "20ºC",
+      probability: "30%",
     ),
     CardTaskData(
-      label: "Personal branding",
-      jobDesk: "Marketing",
-      dueDate: DateTime.now().add(const Duration(hours: 4)),
+      label: "Icon",
+      temper: "20ºC",
+      probability: "30%",
     ),
     CardTaskData(
-      label: "UI UX",
-      jobDesk: "Design",
-      dueDate: DateTime.now().add(const Duration(days: 2)),
+      label: "Icon",
+      temper: "20ºC",
+      probability: "30%",
     ),
     CardTaskData(
-      label: "Determine meeting schedule",
-      jobDesk: "System Analyst",
-      dueDate: DateTime.now().add(const Duration(minutes: 50)),
+      label: "Icon",
+      temper: "20ºC",
+      probability: "30%",
+    ),
+    CardTaskData(
+      label: "Icon",
+      temper: "20ºC",
+      probability: "30%",
     )
   ];
 

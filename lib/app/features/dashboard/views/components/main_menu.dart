@@ -15,7 +15,7 @@ class _MainMenu extends StatelessWidget {
         SelectionButtonData(
           activeIcon: EvaIcons.home,
           icon: EvaIcons.homeOutline,
-          label: "Home",
+          label: "Hom",
         ),
         SelectionButtonData(
           activeIcon: EvaIcons.bell,

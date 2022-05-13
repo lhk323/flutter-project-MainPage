@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "500578212359",
+    "firebase_url": "https://internet-of-umbrella-default-rtdb.firebaseio.com",
+    "project_id": "internet-of-umbrella",
+    "storage_bucket": "internet-of-umbrella.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:500578212359:android:fb3c489df1ca456c9e68a2",
+        "android_client_info": {
+          "package_name": "com.example.daily_task"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "500578212359-9ku4lvsmjlj1tu7uuvcc012rpul9klhu.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyColUiuNnQiSPd3X29GRgE2CG49R-SX2HA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "500578212359-9ku4lvsmjlj1tu7uuvcc012rpul9klhu.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

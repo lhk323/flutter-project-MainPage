@@ -5,13 +5,13 @@ import 'package:daily_task/app/utils/helpers/app_helpers.dart';
 
 class CardTaskData {
   final String label;
-  final String jobDesk;
-  final DateTime dueDate;
+  final String temper;
+  final String probability;
 
   const CardTaskData({
     required this.label,
-    required this.jobDesk,
-    required this.dueDate,
+    required this.temper,
+    required this.probability,
   });
 }
 
@@ -66,7 +66,7 @@ class CardTask extends StatelessWidget {
                     Row(
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        _buildDate(),
+                        _buildHumidity(),
                         SizedBox(
                           height: 20,
                           child: VerticalDivider(
@@ -74,11 +74,10 @@ class CardTask extends StatelessWidget {
                             color: onPrimary,
                           ),
                         ),
-                        _buildHours(),
+                        _buildProbability(),
                       ],
                     ),
                     const Spacer(flex: 2),
-                    _doneButton(),
                   ],
                 ),
               ),
@@ -111,11 +110,11 @@ class CardTask extends StatelessWidget {
       ),
       padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
       child: Text(
-        data.jobDesk,
+        data.temper,
         style: TextStyle(
           color: onPrimary,
-          fontSize: 10,
-          letterSpacing: 1,
+          fontSize: 25,
+          letterSpacing: 1, //자간
         ),
         maxLines: 1,
         overflow: TextOverflow.ellipsis,
@@ -123,61 +122,53 @@ class CardTask extends StatelessWidget {
     );
   }
 
-  Widget _buildDate() {
+  Widget _buildHumidity() {
     return _IconLabel(
       color: onPrimary,
-      iconData: EvaIcons.calendarOutline,
-      label: DateFormat('d MMM').format(data.dueDate),
+      label1: "습도:",
+      label2: data.temper,
     );
   }
 
-  Widget _buildHours() {
+  Widget _buildProbability() {
     return _IconLabel(
       color: onPrimary,
-      iconData: EvaIcons.clockOutline,
-      label: data.dueDate.dueDate(),
+      label1: "강수확률:",
+      label2: data.probability,
     );
   }
 
-  Widget _doneButton() {
-    return ElevatedButton.icon(
-      onPressed: () {},
-      style: ElevatedButton.styleFrom(
-        primary: onPrimary,
-        onPrimary: primary,
-      ),
-      icon: const Icon(EvaIcons.checkmarkCircle2Outline),
-      label: const Text("Done"),
-    );
-  }
+
 }
 
 class _IconLabel extends StatelessWidget {
   const _IconLabel({
     required this.color,
-    required this.iconData,
-    required this.label,
+    required this.label1,
+    required this.label2,
     Key? key,
   }) : super(key: key);
 
   final Color color;
-  final IconData iconData;
-  final String label;
+  final String label1;
+  final String label2;
 
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Icon(
-          iconData,
-          color: color,
-          size: 18,
+        Text(
+          label1,
+          style: TextStyle(
+            fontSize: 15,
+            color: color.withOpacity(.8),
+          ),
         ),
         const SizedBox(width: 5),
         Text(
-          label,
+          label2,
           style: TextStyle(
-            fontSize: 12,
+            fontSize: 15,
             color: color.withOpacity(.8),
           ),
         )
