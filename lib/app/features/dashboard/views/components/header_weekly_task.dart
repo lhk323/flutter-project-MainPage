@@ -1,17 +1,30 @@
 part of dashboard;
 
-class _HeaderWeeklyTask extends StatelessWidget {
-  const _HeaderWeeklyTask({Key? key}) : super(key: key);
+class _contentsHeader extends StatelessWidget {
+  const _contentsHeader({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return Row(
       children: [
-        const HeaderText("Weekly Task"),
+        ClipRRect(
+          borderRadius: BorderRadius.circular(kBorderRadius * 2),
+          child: Container(
+            height: 250,
+            width: 200,
+            color: Colors.indigo,
+          ),
+        ),
         const Spacer(),
-        _buildArchive(),
-        const SizedBox(width: 10),
-        _buildAddNewButton(),
+        ClipRRect(
+          borderRadius: BorderRadius.circular(kBorderRadius * 2),
+          child: Container(
+            height: 250,
+            width: 200,
+            color: Colors.indigo,
+          ),
+        ),
+        const Spacer(),
       ],
     );
   }

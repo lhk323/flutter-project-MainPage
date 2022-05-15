@@ -64,7 +64,7 @@ class DashboardScreen extends GetView<DashboardController> {
                   _buildTaskContent(
                     onPressedMenu: () => controller.openDrawer(),
                   ),
-                  _buildCalendarContent(),
+                  //_buildCalendarContent(),
                 ],
               ),
             );
@@ -86,13 +86,7 @@ class DashboardScreen extends GetView<DashboardController> {
                   height: MediaQuery.of(context).size.height,
                   child: const VerticalDivider(),
                 ),
-                Flexible(
-                  flex: 4,
-                  child: SingleChildScrollView(
-                    controller: ScrollController(),
-                    child: _buildCalendarContent(),
-                  ),
-                ),
+
               ],
             );
           },
@@ -118,13 +112,7 @@ class DashboardScreen extends GetView<DashboardController> {
                   height: MediaQuery.of(context).size.height,
                   child: const VerticalDivider(),
                 ),
-                Flexible(
-                  flex: 4,
-                  child: SingleChildScrollView(
-                    controller: ScrollController(),
-                    child: _buildCalendarContent(),
-                  ),
-                ),
+
               ],
             );
           },
@@ -211,14 +199,18 @@ class DashboardScreen extends GetView<DashboardController> {
           const SizedBox(height: kSpacing),
           _TaskInProgress(data: controller.taskInProgress),
           const SizedBox(height: kSpacing * 2),
-          const _HeaderWeeklyTask(),
+          const _contentsHeader(),
           const SizedBox(height: kSpacing),
+
+          /*
           _WeeklyTask(
             data: controller.weeklyTask,
             onPressed: controller.onPressedTask,
             onPressedAssign: controller.onPressedAssignTask,
             onPressedMember: controller.onPressedMemberTask,
           )
+
+           */
         ],
       ),
     );
