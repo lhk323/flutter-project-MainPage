@@ -14,28 +14,33 @@ class DashboardController extends GetxController {
 
   final taskInProgress = [
     CardTaskData(
-      label: "Icon",
-      temper: "20ºC",
+      label: "맑음",
+      temper: "30ºC",
+      humidity :"20%",
       probability: "30%",
     ),
     CardTaskData(
-      label: "Icon",
+      label: "흐림",
       temper: "20ºC",
+      humidity :"20%",
       probability: "30%",
     ),
     CardTaskData(
-      label: "Icon",
+      label: "비",
       temper: "20ºC",
+      humidity :"90%",
+      probability: "80%",
+    ),
+    CardTaskData(
+      label: "구름 많음",
+      temper: "20ºC",
+      humidity :"20%",
       probability: "30%",
     ),
     CardTaskData(
-      label: "Icon",
+      label: "맑음",
       temper: "20ºC",
-      probability: "30%",
-    ),
-    CardTaskData(
-      label: "Icon",
-      temper: "20ºC",
+      humidity :"20%",
       probability: "30%",
     )
   ];

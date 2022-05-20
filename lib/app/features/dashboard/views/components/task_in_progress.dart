@@ -23,7 +23,7 @@ class _TaskInProgress extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: kSpacing / 2),
             child: CardTask(
               data: data[index],
-              primary: _getSequenceColor(index),
+              primary: _getSequenceColor(data[index]),
               onPrimary: Colors.white,
             ),
           ),
@@ -32,13 +32,12 @@ class _TaskInProgress extends StatelessWidget {
     );
   }
 
-  Color _getSequenceColor(int index) {
-    int val = index % 4;
-    if (val == 3) {
+  Color _getSequenceColor(CardTaskData data) {
+    if (data.label == "비") {
       return Colors.indigo;
-    } else if (val == 2) {
+    } else if (data.label == "흐림") {
       return Colors.grey;
-    } else if (val == 1) {
+    } else if (data.label == "구름 많음") {
       return Colors.redAccent;
     } else {
       return Colors.lightBlue;

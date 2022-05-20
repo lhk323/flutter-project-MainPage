@@ -6,11 +6,13 @@ import 'package:daily_task/app/utils/helpers/app_helpers.dart';
 class CardTaskData {
   final String label;
   final String temper;
+  final String humidity;
   final String probability;
 
   const CardTaskData({
     required this.label,
     required this.temper,
+    required this.humidity,
     required this.probability,
   });
 }
@@ -126,7 +128,7 @@ class CardTask extends StatelessWidget {
     return _IconLabel(
       color: onPrimary,
       label1: "습도:",
-      label2: data.temper,
+      label2: data.humidity,
     );
   }
 
