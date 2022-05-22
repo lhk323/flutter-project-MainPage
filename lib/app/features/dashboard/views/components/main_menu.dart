@@ -15,22 +15,17 @@ class _MainMenu extends StatelessWidget {
         SelectionButtonData(
           activeIcon: EvaIcons.home,
           icon: EvaIcons.homeOutline,
-          label: "Home",
+          label: "위치 설정",
         ),
         SelectionButtonData(
           activeIcon: EvaIcons.bell,
           icon: EvaIcons.bellOutline,
-          label: "Notifications",
+          label: "알림음 설정",
         ),
         SelectionButtonData(
-          activeIcon: EvaIcons.checkmarkCircle2,
-          icon: EvaIcons.checkmarkCircle,
-          label: "Task",
-        ),
-        SelectionButtonData(
-          activeIcon: EvaIcons.settings,
-          icon: EvaIcons.settingsOutline,
-          label: "Settings",
+          activeIcon: EvaIcons.logOut,
+          icon: EvaIcons.logOutOutline,
+          label: "로그아웃",
         ),
       ],
       onSelected: onSelected,

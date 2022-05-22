@@ -5,8 +5,8 @@ class DashboardController extends GetxController {
 
   final dataProfil = const UserProfileData(
     image: AssetImage(ImageRasterPath.man),
-    name: "Firgia",
-    jobDesk: "Project Manager",
+    name: "아이디(기기번호)",
+    jobDesk: "환영합니다",
   );
 
   final member = ["Avril Kimberly", "Michael Greg"];
