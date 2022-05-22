@@ -121,6 +121,7 @@ class DashboardScreen extends GetView<DashboardController> {
     );
   }
 
+  //메뉴
   Widget _buildSidebar(BuildContext context) {
     return Column(
       crossAxisAlignment: CrossAxisAlignment.start,
@@ -143,16 +144,14 @@ class DashboardScreen extends GetView<DashboardController> {
           endIndent: 20,
           height: 60,
         ),
-        _Member(member: controller.member),
-        const SizedBox(height: kSpacing),
-        _TaskMenu(
-          onSelected: controller.onSelectedTaskMenu,
-        ),
-        const SizedBox(height: kSpacing),
+
+        //const SizedBox(height: kSpacing),//위젯 간격
+        const SizedBox(height: kSpacing*13),
+
         Padding(
           padding: const EdgeInsets.all(kSpacing),
           child: Text(
-            "2021 Teamwork lisence",
+            "2022 CAPSTONE DESIGN",
             style: Theme.of(context).textTheme.caption,
           ),
         ),

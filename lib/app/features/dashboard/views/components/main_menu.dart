@@ -15,19 +15,17 @@ class _MainMenu extends StatelessWidget {
         SelectionButtonData(
           activeIcon: EvaIcons.home,
           icon: EvaIcons.homeOutline,
-          label: "Hom",
+          label: "Home",
         ),
         SelectionButtonData(
           activeIcon: EvaIcons.bell,
           icon: EvaIcons.bellOutline,
           label: "Notifications",
-          totalNotif: 100,
         ),
         SelectionButtonData(
           activeIcon: EvaIcons.checkmarkCircle2,
           icon: EvaIcons.checkmarkCircle,
           label: "Task",
-          totalNotif: 20,
         ),
         SelectionButtonData(
           activeIcon: EvaIcons.settings,
