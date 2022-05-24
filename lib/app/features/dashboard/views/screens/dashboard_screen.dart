@@ -18,6 +18,7 @@ import 'package:get/get.dart';
 import 'package:daily_task/app/utils/helpers/app_helpers.dart';
 import 'package:intl/intl.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
+import 'package:geolocator/geolocator.dart';
 
 // binding
 part '../../bindings/dashboard_binding.dart';

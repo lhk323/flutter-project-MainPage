@@ -13,6 +13,7 @@ class _contentsHeader extends StatelessWidget {
             height: 250,
             width: 200,
             color: Colors.indigo,
+            child: const Center(child: Text("하이")),
           ),
         ),
         const Spacer(),

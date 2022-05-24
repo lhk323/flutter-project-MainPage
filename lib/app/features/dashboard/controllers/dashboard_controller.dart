@@ -4,12 +4,10 @@ class DashboardController extends GetxController {
   final scafoldKey = GlobalKey<ScaffoldState>();
 
   final dataProfil = const UserProfileData(
-    image: AssetImage(ImageRasterPath.man),
+    image: AssetImage(ImageRasterPath.dog),
     name: "아이디(기기번호)",
     jobDesk: "환영합니다",
   );
-
-  final member = ["Avril Kimberly", "Michael Greg"];
 
 
   final taskInProgress = [
@@ -123,7 +121,19 @@ class DashboardController extends GetxController {
 
   void onPressedProfil() {}
 
-  void onSelectedMainMenu(int index, SelectionButtonData value) {}
+  void onSelectedMainMenu(int index, SelectionButtonData value) {
+    if (value.label == "위치 설정") {
+      Future<List> a = getCurrentLocation();
+      debugPrint("위치설정 클릭");
+    }
+    else if(value.label == "알림음 설정") {
+      debugPrint("알림음 설정 클릭");
+    }
+    else if(value.label == "로그아웃") {
+      debugPrint("로그아웃 클릭");
+    }
+
+  }
   void onSelectedTaskMenu(int index, String label) {}
 
   void searchTask(String value) {}
@@ -139,4 +149,15 @@ class DashboardController extends GetxController {
       scafoldKey.currentState!.openDrawer();
     }
   }
+}
+
+Future<List> getCurrentLocation() async {
+  Position position = await Geolocator.getCurrentPosition(
+      desiredAccuracy: LocationAccuracy.high);
+
+  String lat = position.latitude.toString();
+  String lon = position.longitude.toString();
+
+  List<String> positionStr = [lat, lon];
+  return positionStr;
 }
