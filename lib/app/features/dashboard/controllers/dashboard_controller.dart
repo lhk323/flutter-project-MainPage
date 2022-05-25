@@ -43,6 +43,8 @@ class DashboardController extends GetxController {
     )
   ];
 
+
+
   final weeklyTask = [
     ListTaskAssignedData(
       icon: const Icon(EvaIcons.monitor, color: Colors.blueGrey),
@@ -123,7 +125,7 @@ class DashboardController extends GetxController {
 
   void onSelectedMainMenu(int index, SelectionButtonData value) {
     if (value.label == "위치 설정") {
-      Future<List> a = getCurrentLocation();
+      getCurrentLocation();
       debugPrint("위치설정 클릭");
     }
     else if(value.label == "알림음 설정") {
@@ -151,13 +153,17 @@ class DashboardController extends GetxController {
   }
 }
 
-Future<List> getCurrentLocation() async {
+void getCurrentLocation() async {
   Position position = await Geolocator.getCurrentPosition(
       desiredAccuracy: LocationAccuracy.high);
 
-  String lat = position.latitude.toString();
-  String lon = position.longitude.toString();
 
-  List<String> positionStr = [lat, lon];
-  return positionStr;
+  final location_data = LocationData(
+    latitude : position.latitude.toString(),
+    longitude: position.longitude.toString(),
+  );
+
+  debugPrint(location_data.latitude);
+  debugPrint(location_data.longitude);
+
 }
