@@ -5,7 +5,7 @@ class DashboardController extends GetxController {
 
   final dataProfil = const UserProfileData(
     image: AssetImage(ImageRasterPath.dog),
-    name: "아이디(기기번호)",
+    name: "10001",
     jobDesk: "환영합니다",
   );
 
@@ -129,6 +129,7 @@ class DashboardController extends GetxController {
       debugPrint("위치설정 클릭");
     }
     else if(value.label == "알림음 설정") {
+
       debugPrint("알림음 설정 클릭");
     }
     else if(value.label == "로그아웃") {
@@ -151,19 +152,32 @@ class DashboardController extends GetxController {
       scafoldKey.currentState!.openDrawer();
     }
   }
+
+  //final userLocationData = FirebaseDatabase().reference();
+  final userLocationData = FirebaseDatabase.instance;
+  void getCurrentLocation() async {
+    Position position = await Geolocator.getCurrentPosition(
+        desiredAccuracy: LocationAccuracy.high);
+
+
+    final location_data = LocationData(
+      latitude : position.latitude.toString(),
+      longitude: position.longitude.toString(),
+    );
+
+    debugPrint(location_data.latitude);
+    debugPrint(location_data.longitude);
+
+    debugPrint(userLocationData.ref("DBConnect").get().toString());
+        //.child("DBConnect").child("Users").child(dataProfil.name).child("location").update({
+    //  "latitude" :  location_data.latitude,
+    //  "longitude" : location_data.longitude,
+    //});
+
+  }
 }
 
-void getCurrentLocation() async {
-  Position position = await Geolocator.getCurrentPosition(
-      desiredAccuracy: LocationAccuracy.high);
 
 
-  final location_data = LocationData(
-    latitude : position.latitude.toString(),
-    longitude: position.longitude.toString(),
-  );
 
-  debugPrint(location_data.latitude);
-  debugPrint(location_data.longitude);
 
-}

@@ -12,6 +12,7 @@ import 'package:daily_task/app/shared_components/simple_selection_button.dart';
 import 'package:daily_task/app/shared_components/simple_user_profile.dart';
 import 'package:daily_task/app/shared_components/user_profile.dart';
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
+import 'package:firebase_database/firebase_database.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -20,7 +21,9 @@ import 'package:intl/intl.dart';
 import 'package:flutter/foundation.dart' show kIsWeb;
 import 'package:geolocator/geolocator.dart';
 import 'package:daily_task/app/shared_components/location_info.dart';
-
+import 'package:firebase_database/ui/firebase_animated_list.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'package:flutter/foundation.dart' show defaultTargetPlatform, kIsWeb;
 // binding
 part '../../bindings/dashboard_binding.dart';
 

@@ -32,7 +32,9 @@ dependencies:
   cloud_firestore: ^3.1.14
   firebase_core: ^1.16.0
   firebase_auth: ^3.3.17
+  firebase_database: ^9.0.14
   eva_icons_flutter: ^3.0.2
+
   flutter:
     sdk: flutter
   get: ^4.3.8
