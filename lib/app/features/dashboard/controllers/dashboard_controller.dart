@@ -150,7 +150,7 @@ class DashboardController extends GetxController {
     if (scafoldKey.currentState != null) {
       scafoldKey.currentState!.openDrawer();
     }
-  }
+  }///
 }
 
 void getCurrentLocation() async {
